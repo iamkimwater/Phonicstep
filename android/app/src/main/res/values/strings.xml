@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Phonicstep</string>
+    <string name="app_name_dev">Phonicstep dev</string>
+    <string name="app_name_alpha">Phonicstep alpha</string>
 </resources>
