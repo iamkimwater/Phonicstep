@@ -93,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.phonicstep"
+    namespace "com.iamkimwater.phonicstep"
     defaultConfig {
-        applicationId "com.phonicstep"
+        applicationId "com.iamkimwater.phonicstep"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -1,4 +1,4 @@
-package com.phonicstep;
+package com.iamkimwater.phonicstep;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
