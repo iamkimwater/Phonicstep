@@ -153,6 +153,11 @@ android {
             applicationIdSuffix ".alpha"
             manifestPlaceholders = [appName: "@string/app_name_alpha"]
         }
+        beta {
+            dimension "type"
+            applicationIdSuffix ".beta"
+            manifestPlaceholders = [appName: "@string/app_name_beta"]
+        }
         prod {
             dimension "type"
         }
@@ -200,6 +205,7 @@ apply from: file("../../node_modules/@react-native-community/cli-platform-androi
 project.ext.envConfigFiles = [
     devdebug: ".env.dev",
     alphadebug: ".env.alpha",
+    betarelease: ".env.beta",
     prodrelease: ".env.prod"
 ]
 

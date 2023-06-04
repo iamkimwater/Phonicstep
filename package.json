@@ -6,6 +6,7 @@
     "android:clean": "cd android && ./gradlew clean",
     "android:dev": "watchman watch-del-all && npx react-native run-android --variant=devDebug --appIdSuffix dev",
     "android:alpha:apk": "watchman watch-del-all && npm ci && cd android && ./gradlew assembleAlphaDebug && cd .. && open android/app/build/outputs/apk/alpha/debug",
+    "android:beta:aab": "watchman watch-del-all && npm ci && cd android && ./gradlew bundleBetaRelease && cd .. && open android/app/build/outputs/bundle/beta/release",
     "android:prod:aab": "watchman watch-del-all && npm ci && cd android && ./gradlew bundleProdRelease && cd .. && open android/app/build/outputs/bundle/prod/release",
     "ios:clean": "cd ios && xcodebuild clean",
     "ios:permission": "npx react-native setup-ios-permissions",
