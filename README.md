@@ -71,10 +71,11 @@
     - android versionName 0.0.1로 세팅
     - ios > target > general > version(marketing_versioni) 0.0.1로 세팅
     - fastlane 설치
+        - sudo gem install fastlane -NV
         - cd ios && sudo fastlane init
         - ios 폴더에 fastlane 설치를 위한 Gemfile이 생성되어 ios 폴더 내에서 bundle exec를 수행할 때 Gemfile의 path를 명시해야 함
     - 플러그인 추가 및 설치
-        - cd ios && bundle exec fastlane install_plugins
+        - cd ios && bundle exec --gemfile=./Gemfile fastlane install_plugins
     - Fastfile 작성
         - 패치 업데이트
             - android
@@ -104,31 +105,25 @@
 ## 빌드 타입에 따른 브랜치 관리 및 업데이트 전략
 
 - dev
-    - 개발 단계
     - 시뮬레이터 또는 개인 디바이스로 앱 개발
     - 로컬 서버로 테스트
     - 내부 팀 테스트가 필요한 경우
-        - alpha 브랜치에 머지
+        - 작업 중인 feat 브랜치에서 alpha 빌드 진행
+        - apk, ipa 파일을 구글 드라이브로 공유해서 앱 테스트
+        - 테스트 시 오류가 발생한 경우 코드 수정
+        - 오류가 발생하지 않았을 경우 dev 브랜치에 머지
     - 업데이트가 필요한 경우
         - 패치 업데이트
             - fastlane 패치 업데이트 실행
-            - 스테이징 코드 푸쉬
             - beta 브랜치에 머지
         - 마이너 업데이트
             - fastlane 마이너 업데이트 실행
             - beta 브랜치에 머지
-- alpha
-    - 내부 팀 테스트 단계
-    - apk, ipa 파일을 구글 드라이브로 공유해서 앱 테스트
-    - 테스트 서버로 테스트
 - beta
-    - 업데이트 단계
     - 패치 업데이트
-        - 빌드
-        - 개인 디바이스로 테스트
-        - apk, ipa 파일을 구글 드라이브로 공유해서 테스트
+        - 빌드 후 aab 파일 명령어로 코드푸쉬 서버에 업로드 (스테이징 코드푸쉬)
         - 테스트 서버로 테스트
-        - 프로덕션 코드 푸쉬
+        - prod 브랜치에 머지
     - 마이너 업데이트인 경우
         - 빌드
         - 플레이 스토어와 앱 스토어에 앱 등록
@@ -136,9 +131,11 @@
         - 테스트 서버로 테스트
         - prod 브랜치에 머지
 - prod
-    - 빌드
-    - 플레이 스토어와 앱 스토어에 앱 등록
-    - 즉시 배포 진행
+    - 패치 업데이트
+        - 빌드 후 aab 파일 명령어로 코드푸쉬 서버에 업로드 (프로덕션 코드푸쉬)
+    - 마이너 업데이트인 경우
+        - 빌드
+        - 플레이 스토어와 앱 스토어에 앱 등록 (즉시 배포)
 
 ## 패키지 설치
 

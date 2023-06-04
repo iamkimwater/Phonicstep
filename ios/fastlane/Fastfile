@@ -1,0 +1,53 @@
+desc 'Android patch update'
+private_lane :android_patch_update do
+package = load_json(json_path: "../package.json")
+increment_version_name(
+  gradle_file_path: "../android/app/build.gradle",
+  version_name: package['version']
+)
+end
+
+desc 'IOS patch update'
+private_lane :ios_patch_update do
+package = load_json(json_path: "../package.json")
+increment_version_number_in_xcodeproj(
+  xcodeproj: './' + package['name'] + '.xcodeproj',
+  version_number: package['version']
+)
+end
+
+desc 'Android minor update'
+private_lane :android_minor_update do
+package = load_json(json_path: "../package.json")
+increment_version_name(
+  gradle_file_path: "../android/app/build.gradle",
+  version_name: package['version']
+)
+increment_version_code(
+  gradle_file_path: "../android/app/build.gradle",
+)
+end
+
+desc 'IOS minor update'
+private_lane :ios_minor_update do
+package = load_json(json_path: "../package.json")
+increment_version_number_in_xcodeproj(
+  xcodeproj: './' + package['name'] + '.xcodeproj',
+  version_number: package['version']
+)
+increment_build_number_in_xcodeproj(
+  xcodeproj: './' + package['name'] + '.xcodeproj'
+)
+end
+
+desc 'Patch update'
+lane :patch_update do
+android_patch_update
+ios_patch_update
+end
+
+desc 'Minor update'
+lane :minor_update do
+android_minor_update
+ios_minor_update
+end
