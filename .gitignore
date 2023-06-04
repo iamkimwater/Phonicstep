@@ -68,3 +68,5 @@ yarn-error.log
 .env.beta
 .env.prod
 .env
+
+appcenter-config.json

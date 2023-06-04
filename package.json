@@ -13,17 +13,21 @@
     "ios:pod:install": "bundle install && cd ios && bundle install && bundle exec --gemfile=../Gemfile pod install",
     "ios:pod:uninstall": "cd ios && bundle exec --gemfile=../Gemfile pod deintegrate",
     "ios:dev": "watchman watch-del-all && npx react-native run-ios --scheme Phonicstep-dev",
-    "appcenter-android-key": "appcenter codepush deployment list -a monzland/lavendi-android -k",
+    "appcenter-android-key": "appcenter codepush deployment list -a iamkimwater-gmail.com/Phonicstep-beta -k",
     "appcenter-ios-key": "appcenter codepush deployment list -a monzland/lavendi-ios -k",
     "update:patch": "npm version patch --no-git-tag-version && cd ios && bundle exec --gemfile=./Gemfile fastlane patch_update",
     "update:minor": "npm version minor --no-git-tag-version && cd ios && bundle exec --gemfile=./Gemfile fastlane minor_update",
     "patch-update": "npm version patch --no-git-tag-version && cd ios && bundle exec fastlane bump",
     "minor-update": "npm version minor --no-git-tag-version && cd ios && bundle exec fastlane bump",
     "major-update": "npm version major --no-git-tag-version && cd ios && bundle exec fastlane bump",
-    "codepush:android": "appcenter codepush release-react -a monzland/lavendi-android -d Staging --sourcemap-output --output-dir ./build -m -t 0.0",
+    "codepush:android-beta": "appcenter codepush release-react -a iamkimwater-gmail.com/Phonicstep-beta -d Staging --sourcemap-output --output-dir ./build -m -t 0.0",
+    "codepush:android-prod": "appcenter codepush release-react -a iamkimwater-gmail.com/Phonicstep-prod -d Production --sourcemap-output --output-dir ./build -m -t 0.0",
     "codepush:ios": "appcenter codepush release-react -a monzland/lavendi-ios -d Staging --sourcemap-output --output-dir ./build -m -t 0.0"
   },
   "dependencies": {
+    "appcenter": "4.4.5",
+    "appcenter-analytics": "4.4.5",
+    "appcenter-crashes": "4.4.5",
     "react": "18.2.0",
     "react-native": "0.71.8",
     "react-native-config": "^1.5.1"

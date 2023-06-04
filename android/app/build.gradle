@@ -147,19 +147,24 @@ android {
             dimension "type"
             applicationIdSuffix ".dev"
             manifestPlaceholders = [appName: "@string/app_name_dev"]
+            resValue "string", "CodePushDeploymentKey", ""
         }
         alpha {
             dimension "type"
             applicationIdSuffix ".alpha"
             manifestPlaceholders = [appName: "@string/app_name_alpha"]
+            resValue "string", "CodePushDeploymentKey", ""
         }
         beta {
             dimension "type"
             applicationIdSuffix ".beta"
             manifestPlaceholders = [appName: "@string/app_name_beta"]
+            resValue "string", "CodePushDeploymentKey", "I6E4Mgb4nvg510JUQgVe6gy-8Nrrs-lliLFGc"
         }
         prod {
             dimension "type"
+            resValue "string", "CodePushDeploymentKey", "L9LHKMLVmxVXZOaHiTCqv8YBY2K3jw-QxcW3C"
+
         }
     }
 
@@ -210,3 +215,6 @@ project.ext.envConfigFiles = [
 ]
 
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
+apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
