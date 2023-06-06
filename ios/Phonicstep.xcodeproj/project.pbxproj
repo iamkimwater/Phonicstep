@@ -14,6 +14,7 @@
 		1AFE0469CF3D39C29F9E7D2B /* libPods-Phonicstep-PhonicstepTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFF133155B25D7F3FAE94EE /* libPods-Phonicstep-PhonicstepTests.a */; };
 		46926479710C79C19850D792 /* libPods-Phonicstep.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E802099EA696BEBC3DEF0B3 /* libPods-Phonicstep.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9F1B79362A2EF0FC007890D1 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F1B79352A2EF0FC007890D1 /* AppCenter-Config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		4E802099EA696BEBC3DEF0B3 /* libPods-Phonicstep.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Phonicstep.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Phonicstep/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		998A3098A5DA2ACCDD9E169B /* Pods-Phonicstep.betarelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phonicstep.betarelease.xcconfig"; path = "Target Support Files/Pods-Phonicstep/Pods-Phonicstep.betarelease.xcconfig"; sourceTree = "<group>"; };
+		9F1B79352A2EF0FC007890D1 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AppCenter-Config.plist"; sourceTree = "<group>"; };
 		A27078E7EBDDCCA687EA77C1 /* Pods-Phonicstep.prodrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phonicstep.prodrelease.xcconfig"; path = "Target Support Files/Pods-Phonicstep/Pods-Phonicstep.prodrelease.xcconfig"; sourceTree = "<group>"; };
 		ACFF133155B25D7F3FAE94EE /* libPods-Phonicstep-PhonicstepTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Phonicstep-PhonicstepTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41C0477ADE590CB5CDBA107 /* Pods-Phonicstep-PhonicstepTests.devdebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Phonicstep-PhonicstepTests.devdebug.xcconfig"; path = "Target Support Files/Pods-Phonicstep-PhonicstepTests/Pods-Phonicstep-PhonicstepTests.devdebug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				9F1B79352A2EF0FC007890D1 /* AppCenter-Config.plist */,
 				13B07FAE1A68108700A75B9A /* Phonicstep */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PhonicstepTests */,
@@ -252,6 +255,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				9F1B79362A2EF0FC007890D1 /* AppCenter-Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_PUSH_DEPLOYMENT_KEY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Phonicstep/Info.plist;
@@ -521,6 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_PUSH_DEPLOYMENT_KEY = "gM9lM4NsuIHKze9gvP9y9rOhKwL-9tT0KV1k2";
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = Phonicstep/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Phonicstep;
@@ -756,6 +762,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_PUSH_DEPLOYMENT_KEY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Phonicstep/Info.plist;
@@ -876,6 +883,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_PUSH_DEPLOYMENT_KEY = "46PC79OpIBLqMJp4t_gQGOsUyTPKsuT--wmVS";
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = Phonicstep/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Phonicstep;
