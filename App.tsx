@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-import LoginComponent from './app/components/auth/LoginComponent';
+// import LoginComponent from './app/components/auth/LoginComponent';
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
         <Text>헤더</Text>
       </View>
       <View style={styles.body}>
-        <LoginComponent />
+        {/*<LoginComponent />*/}
       </View>
       <View style={styles.footer}>
         <Text>푸터</Text>
